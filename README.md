@@ -8,13 +8,13 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #d7ccc8, #f4e1d2); /* لون بني هادئ */
+      background: linear-gradient(to bottom, #d7ccc8, #f4e1d2);
       text-align: center;
       padding: 50px;
     }
 
     h1 {
-      color: #3e2723; /* لون بني داكن */
+      color: #3e2723;
       font-size: 34px;
     }
 
@@ -28,7 +28,7 @@
       font-size: 24px;
       padding: 15px 30px;
       margin-top: 20px;
-      background-color: #6d4c41; /* بني متوسط */
+      background-color: #6d4c41;
       color: white;
       border: none;
       border-radius: 15px;
@@ -50,7 +50,7 @@
     footer {
       margin-top: 60px;
       font-size: 14px;
-      color: #8d6e63; /* لون بني فاتح */
+      color: #8d6e63;
     }
   </style>
 </head>
@@ -67,10 +67,14 @@
   </footer>
 
   <script>
-    let count = 0;
+    // استرجاع العدد من التخزين المحلي
+    let count = localStorage.getItem('istighfarCount') || 0;
+    document.getElementById('count').innerText = count;
+
     function incrementCount() {
       count++;
       document.getElementById('count').innerText = count;
+      localStorage.setItem('istighfarCount', count);
     }
   </script>
 
